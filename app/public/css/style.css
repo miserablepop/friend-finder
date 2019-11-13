@@ -1,4 +1,31 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 .card-panel{
     font-size: 40px;
     margin-top: 100px;
 }
+
+.survey-questions{
+    text-align: left;
+}
+
+.divider{
+    margin-bottom: 30px;
+}
+
+.submit-btn{
+    margin-top: 50px;
+}
+
+#survey-panel{
+    text-align: center;
+}
+

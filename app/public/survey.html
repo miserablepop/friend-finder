@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <title>Friend Finder - Survey</title>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -14,6 +14,9 @@
 
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- Header section with navbar -->
@@ -36,11 +39,186 @@
     <!-- Main section with card panel -->
     <main>
         <div class="container">
-            
+            <div class="row">
+                <div class="col s12 z-depth-5 panel">
+                    <div id="survey-panel">
+                        <!-- Survey header section -->
+                        <div class="row survey-header">
+                            <h2>Survey Questions</h2>
+                            <div class="divider"></div>
+                            <h4>About You</h4>
+                        </div>
+                        <!-- About you section -->
+                        <div class="row about-you">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input type="text" id="userName" class="validate">
+                                        <label for="icon_prefix">First Name</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">image</i>
+                                        <input type="url" id="userPhoto" class="validate">
+                                        <label for="image_link">Link to Image Photo</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="row survey-questions">
+                            <div class="input-field col s8">
+                                <h5>Question 1</h5>
+                                <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+                                <select id="question1">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 2</h5>
+                                <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+                                <select id="question2">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 3</h5>
+                                <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+                                <select id="question3">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 4</h5>
+                                <h6>You rarely do something just out of sheer curiosity.</h6>
+                                <select id="question4">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 5</h5>
+                                <h6>People can rarely upset you.</h6>
+                                <select id="question5">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 6</h5>
+                                <h6>It is often difficult for you to relate to other people’s feelings.</h6>
+                                <select id="question6">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 7</h5>
+                                <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+                                <select id="question7">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 8</h5>
+                                <h6>You rarely get carried away by fantasies and ideas.</h6>
+                                <select id="question8">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 9</h5>
+                                <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
+                                <select id="question9">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s8">
+                                <h5>Question 10</h5>
+                                <h6>You feel more energetic after spending time with a group of people.</h6>
+                                <select id="question10">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>                                                                                                                       
+                        </div>
+                        <div class="row submit-btn">
+                            <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action" id="submitButton">Submit
+                                <i class="material-icons right">send</i>
+                            </button>   
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- Footer section -->
+    <footer class="page-footer blue darken-2">
+        <div class="container">
+            <div class="row">
+                          
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 JC Lenz
+                <a class="grey-text text-lighten-4 right" href="https://materializecss.com/" target="_blank">Made by Materialize</a>
+            </div>
+        </div>
+    </footer>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="./javascript/app.js"></script>
+
 </body>
 </html>
