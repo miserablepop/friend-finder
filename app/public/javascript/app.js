@@ -25,5 +25,7 @@ $(document).ready(function(){
             ]
         };
         console.log('userInput = ' + JSON.stringify(userInput));
+
+        
     });
 });

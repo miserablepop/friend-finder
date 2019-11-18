@@ -2,6 +2,7 @@
 const express = require('express');
 var path = require('path');
 
+
 // Set port to 8080
 const PORT = 8080;
 
@@ -11,9 +12,15 @@ const app = express();
 // Public directory to access CSS file
 app.use(express.static(path.join(__dirname, './app/public')));
 
-// // Add application routes
-// require(path.join(__dirname, './app/routing/apiRoutes'))(app);
-// require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
+// Including API and HTML routes
+require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 // Start listening on port 8080
 app.listen(PORT, function(){
