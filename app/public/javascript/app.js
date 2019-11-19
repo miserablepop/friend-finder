@@ -38,6 +38,11 @@ $(document).ready(function(){
         };
         console.log('userInput = ' + JSON.stringify(userInput));
 
-        
+        // var currentURL = window.location.origin;
+
+        $.post("/friends", userInput)
+        .then(function(data) {
+          console.log(data);
+        });
     });
 });
