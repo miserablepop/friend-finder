@@ -3,7 +3,7 @@ var friends = require('../data/friends');
 module.exports = function(app){
 
     // Returns Friends array in JSON
-    app.get('/friends', function(req, res){
+    app.get('/friends/data', function(req, res){
         res.json(friends);
     });
 
