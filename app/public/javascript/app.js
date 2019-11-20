@@ -41,8 +41,13 @@ $(document).ready(function(){
         // var currentURL = window.location.origin;
 
         $.post("/friends", userInput)
-        .then(function(data) {
-          console.log(data);
+            .done(function(data) {
+                console.log(data);
+                $('#friendMatch').html(data.name);
+	            $("#friendImg").attr("src", data.photo);
+                
+                // Pop open the modal dialog
+      			$('#modal1').modal('open');
         });
     });
 });

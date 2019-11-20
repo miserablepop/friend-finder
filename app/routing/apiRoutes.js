@@ -13,8 +13,8 @@ module.exports = function(app){
         console.log(newFriend);
 
         // parseInt for scores
-        for(var i = 0; i < user.scores.length; i++) {
-            user.scores[i] = parseInt(user.scores[i]);
+        for(var i = 0; i < newFriend.scores.length; i++) {
+            newFriend.scores[i] = parseInt(newFriend.scores[i]);
         }
 
         // default friend match is the first friend but result will be whoever has the minimum difference in scores
@@ -26,7 +26,7 @@ module.exports = function(app){
         for(var i = 0; i < friends.length; i++) {
             var totalDifference = 0;
             for(var j = 0; j < friends[i].scores.length; j++) {
-                var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
+                var difference = Math.abs(newFriend.scores[j] - friends[i].scores[j]);
                 totalDifference += difference;
             }
 
