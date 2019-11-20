@@ -47,7 +47,12 @@ $(document).ready(function(){
 	            $("#friendImg").attr("src", data.photo);
                 
                 // Pop open the modal dialog
-      			$('#modal1').modal('open');
+                $('#modal1').modal('open');
+                $('#userName').val('');
+                $('#userPhoto').val('');  
+
         });
+
     });
+
 });
