@@ -1,4 +1,5 @@
 var friends = require('../data/friends');
+// var loadCards = require('../public/javascript/app');
 
 module.exports = function(app){
 
@@ -7,6 +8,7 @@ module.exports = function(app){
         res.json(friends);
     });
 
+    // 
     app.post('/friends', function(req, res){
         
         var newFriend = req.body;

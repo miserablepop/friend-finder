@@ -4,7 +4,15 @@ $(document).ready(function(){
     $('select').formSelect();
 
     // Initialize Modal
-    $('.modal').modal();
+    $('.modal').modal({
+        onCloseEnd (){
+            $('#userName').val('');
+            $('#userPhoto').val('');  
+            $("form input").val('');
+            $('select').val('');
+            $('select').formSelect();
+        }
+    });
     
 
     // for HTML5 "required" attribute
@@ -48,11 +56,11 @@ $(document).ready(function(){
                 
                 // Pop open the modal dialog
                 $('#modal1').modal('open');
-                $('#userName').val('');
-                $('#userPhoto').val('');  
 
         });
 
     });
 
+
+    
 });
