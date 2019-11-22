@@ -60,6 +60,22 @@
             </div>
         </div>
     </footer>
+    <!-- <script type="text/javascript">
+        var queryURL = "/friends/data";
 
+            $.ajax({
+            url: queryURL,
+            method: "GET"
+            }).then(function(res) {
+                console.log(res);
+                for (var i = 0; i < res.length; i++){
+                    $('#friends').append('<div class = "col s12 m4">');
+                    $('#friends').append('<div class="card"><div class="card-image"><img src="' + res[i]['photo'] + '"width="200" height="267"><span class="card-title">"' + res[i].name + '"</span></div>"');
+                    $('#freiends').append('<div class="card-content><p></p></div>');
+                }
+            });    
+        
+    
+    </script> -->
 </body>
 </html>
