@@ -39,10 +39,8 @@
 
     <!-- Main section with card panel -->
     <main>
-        <div class="row">
-            <div id="friends">
+        <div class="row" id="friends">
 
-            </div>
         </div>
     </main>
 
@@ -60,7 +58,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         var queryURL = "/friends/data";
 
             $.ajax({
@@ -69,13 +67,12 @@
             }).then(function(res) {
                 console.log(res);
                 for (var i = 0; i < res.length; i++){
-                    $('#friends').append('<div class = "col s12 m4">');
-                    $('#friends').append('<div class="card"><div class="card-image"><img src="' + res[i]['photo'] + '"width="200" height="267"><span class="card-title">"' + res[i].name + '"</span></div>"');
-                    $('#freiends').append('<div class="card-content><p></p></div>');
+                        $('#friends').append('<div class = "col s12 m3 l2"><div class="card"><div class="card-image"><img src="' + res[i]['photo'] + '"><span class="card-title">' 
+                            + res[i].name.replace(/\"/g, "") + '</span></div><div class="card-content"><p></p></div></div></div>');
                 }
             });    
         
     
-    </script> -->
+    </script>
 </body>
 </html>
