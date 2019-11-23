@@ -10,8 +10,8 @@ const PORT = 8080;
 const app = express();
 
 // Public directory to access CSS file
-app.use(express.static(path.join(__dirname, './app/public')));
-
+// app.use(express.static(path.join(__dirname, './app/public')));
+app.use(express.static('./app/public'));
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));

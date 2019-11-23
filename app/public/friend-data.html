@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <!-- Link to jQuery -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -30,7 +30,7 @@
                 </ul>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="https://github.com/miserablepop/friend-finder" target="_blank">GitHub</a></li>
-                    <li><a href="/friends/json">Friend Data</a></li>
+                    <li><a href="/friends_json">Friend Data</a></li>
                     <li><a href="/friends">Friends</a></li>
                 </ul>
             </div>
@@ -39,8 +39,10 @@
 
     <!-- Main section with card panel -->
     <main>
-        <div class="row" id="friends">
-
+        <div class="row">
+            <pre id="friends">
+                
+            </pre>
         </div>
     </main>
 
@@ -58,18 +60,21 @@
             </div>
         </div>
     </footer>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         var queryURL = "/friends/data";
 
             $.ajax({
             url: queryURL,
             method: "GET"
             }).then(function(res) {
-                console.log(res);
+                // console.log(res);
                 var prettyJSON = JSON.stringify(res, undefined, 2);
+                console.log(prettyJSON);
+
+                $('#friends').append('<p>' + prettyJSON + '</p>');
             });    
         
     
-    </script> -->
+    </script>
 </body>
 </html>

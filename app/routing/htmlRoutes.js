@@ -19,7 +19,7 @@ module.exports = function(app){
     });
 
     // Friends Data
-    app.get('/friends/json', function(req, res){
+    app.get('/friends_json', function(req, res){
         console.log(__dirname);
         res.sendFile(path.join(__dirname, '../public/', 'friend-data.html'))
     });
