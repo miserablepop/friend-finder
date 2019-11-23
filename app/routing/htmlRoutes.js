@@ -17,4 +17,11 @@ module.exports = function(app){
     app.get('/friends', function(req, res){
         res.sendFile(path.join(__dirname, '../public', 'friends.html'))
     });
+
+    // Friends Data
+    app.get('/friends/json', function(req, res){
+        console.log(__dirname);
+        res.sendFile(path.join(__dirname, '../public/', 'friend-data.html'))
+    });
 } 
+
