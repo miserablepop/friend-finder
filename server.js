@@ -4,7 +4,7 @@ var path = require('path');
 
 
 // Set port to 8080
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 
 // Configure the Express application
 const app = express();
