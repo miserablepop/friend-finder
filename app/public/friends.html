@@ -67,8 +67,8 @@
             }).then(function(res) {
                 console.log(res);
                 for (var i = 0; i < res.length; i++){
-                        $('#friends').append('<div class = "col s12 m3 l2"><div class="card"><div class="card-image"><img src="' + res[i]['photo'] + '"><span class="card-title">' 
-                            + res[i].name.replace(/\"/g, "") + '</span></div><div class="card-content"><p></p></div></div></div>');
+                    $('#friends').append('<div class = "col s12 m3 l2"><div class="card"><div class="card-image"><img src="' + res[i]['photo'] + '"></div><div class="card-content"><p>' 
+                        + res[i].name.replace(/\"/g, "") + '</p></div></div></div>');
                 }
             });    
         
