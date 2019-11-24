@@ -31,3 +31,11 @@ main {
     text-align: center;
 }
 
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+    a.brand-logo{
+        font-size: 15px;
+    }
+  }
+

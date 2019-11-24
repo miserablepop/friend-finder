@@ -33,15 +33,15 @@
                     <li><a href="/friends_json">Friend Data</a></li>
                     <li><a href="/friends">Friends</a></li>
                 </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/survey">Survey</a></li>
+                    <li><a href="https://github.com/miserablepop/friend-finder" target="_blank">GitHub</a></li>
+                    <li><a href="/friends_json">Friend Data</a></li>
+                    <li><a href="/friends">Friends</a></li>
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
-            <ul id="slide-out" class="sidenav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/survey">Survey</a></li>
-                <li><a href="https://github.com/miserablepop/friend-finder" target="_blank">GitHub</a></li>
-                <li><a href="/friends_json">Friend Data</a></li>
-                <li><a href="/friends">Friends</a></li>
-            </ul>
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </nav>   
     </header>
 
@@ -81,8 +81,13 @@
 
                 $('#friends').append('<p>' + prettyJSON + '</p>');
             });    
-        
-    
     </script>
+
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="./javascript/app.js"></script>
 </body>
 </html>
