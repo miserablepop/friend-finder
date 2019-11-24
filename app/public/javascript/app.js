@@ -3,6 +3,9 @@ $(document).ready(function(){
     // Initialize Select inputs
     $('select').formSelect();
 
+    // Initialize Sidenav
+    $('.sidenav').sidenav();
+
     // Initialize Modal
     $('.modal').modal({
         onCloseEnd (){
@@ -15,14 +18,7 @@ $(document).ready(function(){
     });
     
 
-    // for HTML5 "required" attribute
-    $("select[required]").css({
-        display: "inline",
-        height: 0,
-        padding: 0,
-        width: 0
-      });
-
+   
     // Activate submit button
     $('#submitButton').on('click', function(event){
         event.preventDefault();

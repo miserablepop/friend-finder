@@ -14,6 +14,9 @@
 
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header section with navbar -->
@@ -30,6 +33,14 @@
                     <li><a href="/friends_json">Friend Data</a></li>
                     <li><a href="/friends">Friends</a></li>
                 </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/survey">Survey</a></li>
+                    <li><a href="https://github.com/miserablepop/friend-finder" target="_blank">GitHub</a></li>
+                    <li><a href="/friends_json">Friend Data</a></li>
+                    <li><a href="/friends">Friends</a></li>
+                  </ul>
+                  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>   
     </header>
@@ -74,5 +85,8 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="./javascript/app.js"></script>
 </body>
 </html>
