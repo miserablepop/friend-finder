@@ -14,6 +14,10 @@ module.exports = function(app){
         var newFriend = req.body;
         console.log(newFriend);
 
+        // I want to incorporate some code to loop through the friendsarray to see if the user already exists. 
+        // That way we don't have the same user multiple times.
+
+        
         // parseInt for scores
         for(var i = 0; i < newFriend.scores.length; i++) {
             newFriend.scores[i] = parseInt(newFriend.scores[i]);
